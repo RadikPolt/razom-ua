@@ -62,7 +62,7 @@ p{
 	width:100%;
 	@media screen and (min-width:1025px){
 		font: 400 14px/20px "Fira Sans", sans-serif;
-		padding: 0 20px;
+		padding: 0 24px;
 	}
   &__wrapper {
 	display: flex;
@@ -75,8 +75,9 @@ p{
 	@media screen and (min-width:1025px){
 		padding: 0;
 		justify-content: space-between;
-		margin: 0 auto;
+		margin:0 auto;
 		align-items: baseline;
+		max-width:1280px;
 	}
   }
   a {
@@ -90,11 +91,12 @@ p{
 }
   &__socials{
 	display: inline-block;
-height:52px;
-width:60px;
-background-color: #4469B0;
-text-align: center;
-@media screen and (min-width:640px){
+	height:52px;
+	width:60px;
+	background-color: #4469B0;
+	text-align: center;
+	cursor: pointer;
+	@media screen and (min-width:640px){
 	height:40px;
 	width:39px;
 	margin: 12px 0;
@@ -103,6 +105,10 @@ text-align: center;
 	height:48px;
 	width:48px;
 	margin: 0;
+}
+&:hover{
+	background-color: red;
+	transition: 1s;
 }
   }
 
@@ -118,8 +124,7 @@ text-align: center;
 	@media screen and (min-width:640px){
 		padding-bottom:0;
 	}
-
-}
+	}
   &__policy{
 	@media screen and (min-width:640px){
 		padding-top:8px;
@@ -127,14 +132,14 @@ text-align: center;
 	@media screen and (min-width:1025px){
 	padding:0;
 	}
-  }
-  @media screen and (min-width:640px){
+	}
+	@media screen and (min-width:640px){
 	width: 50%;
 	margin:0;
 	flex-direction: row;
 }
 @media screen and (min-width:1025px){
-	width:39%;
+	width:48%;
 	justify-content: space-between;
 }
 
@@ -172,42 +177,46 @@ text-align: center;
   justify-content: flex-end;
   @media screen and (min-width:640px){
   width:40%;
-padding:0;
-justify-content: flex-end;
+  padding:0;
+  justify-content: flex-end;
   }
   @media screen and (min-width:1025px){
 	flex-direction: row;
 	justify-content: space-between;
-	width:35%;
+	width:45%;
   }
   &__phone{
 	display: inline-block;
 	text-align: center;
 	height:52px;
 	width:calc(100% - 60px);
-  background-color: #EA291D;
-  @media screen and (min-width:640px){
-  height:40px;
-width:fit-content;
-margin: 12px 0;
-  }
-  @media screen and (min-width:1025px){
+	background-color: #EA291D;
+	@media screen and (min-width:640px){
+	height:40px;
+	width:fit-content;
+	margin: 12px 0;
+	}
+	@media screen and (min-width:1025px){
 	height:48px;
 	margin: 0;
-  }
+	}
  }
  &__text{
 	display: inline-block;
 	padding:16px 42px;
 	font-size: 14px;
-line-height: 20px;
-color: #ffffff;
-@media screen and (min-width:640px){
+	line-height: 20px;
+	color: #ffffff;
+	@media screen and (min-width:640px){
 	padding:10px;
-}
-@media screen and (min-width:1025px){
+	}
+	@media screen and (min-width:1025px){
 	padding:14px 16px;
-}
+	}
+	&:hover{
+		transform: scale(1.1);
+		transition: 0.3s;
+	}
   }
   &__contacts{
 	@media screen and (min-width:1025px){

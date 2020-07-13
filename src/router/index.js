@@ -7,12 +7,12 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'На головну',
+    name: 'Home',
     component: Home
   },
   {
     path: '/potreby-likaren',
-    name: 'Потреби лікарень',
+    name: 'Hospitals',
     component: () => import('../views/Hospitals.vue')
   }
 ]

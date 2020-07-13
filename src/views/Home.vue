@@ -9,7 +9,7 @@
 import Footer from '@/components/Footer.vue'
 
 export default {
-  name: 'На головну',
+  name: 'Home',
   components: {
     Footer
   }

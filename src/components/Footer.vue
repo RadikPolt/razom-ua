@@ -9,9 +9,9 @@
 			<div class="ba-mobile-footer">
 				<a href="#">Контактна інформація</a>
 				<div class="ba-languages">
-					<a href="#">УКР</a>
-	<a href="#">ENG</a>
-						</div>
+<a href="#" class="ba-languages__ua">УКР</a>
+<a href="#" class="ba-languages__eng">ENG</a>
+	</div>
 					</div>
 		</div>
 		<!-- /.ba-tablet-footer -->	
@@ -60,6 +60,9 @@ p{
 	font: 400 12px/16px "Fira Sans", sans-serif;
 	color: #ffffff;
 	width:100%;
+	@media screen and (min-width:640px){
+		font: 400 12px/16px "Fira Sans", sans-serif;
+	}
 	@media screen and (min-width:1025px){
 		font: 400 14px/20px "Fira Sans", sans-serif;
 		padding: 0 24px;
@@ -84,6 +87,10 @@ p{
 	text-decoration: none;
 	color: #ffffff;
 	text-decoration: underline;
+	font: 400 12px/16px "Fira Sans", sans-serif;
+	@media screen and (min-width:1025px){
+		font: 400 14px/20px "Fira Sans", sans-serif;
+	}
   
   &:hover, &:active {
 	color: red;
@@ -139,7 +146,7 @@ p{
 	flex-direction: row;
 }
 @media screen and (min-width:1025px){
-	width:48%;
+	width:44%;
 	justify-content: space-between;
 }
 
@@ -161,12 +168,13 @@ p{
 	}
 }
 .ba-languages{
-
+align-items: center;
 	&__ua{
-		padding-right: 10px;
+	padding-right: 8px;
 	}
 	@media screen and (min-width:1025px){
 		margin:12px 0;
+		padding:0 10px;
 	}
 	
 }
@@ -179,11 +187,13 @@ p{
   width:40%;
   padding:0;
   justify-content: flex-end;
+  font: 400 12px/16px "Fira Sans", sans-serif;
   }
   @media screen and (min-width:1025px){
+	font: 400 14px/20px "Fira Sans", sans-serif;
 	flex-direction: row;
 	justify-content: space-between;
-	width:45%;
+	width:42%;
   }
   &__phone{
 	display: inline-block;
@@ -199,6 +209,7 @@ p{
 	@media screen and (min-width:1025px){
 	height:48px;
 	margin: 0;
+	height:100%;
 	}
  }
  &__text{
@@ -207,11 +218,14 @@ p{
 	font-size: 14px;
 	line-height: 20px;
 	color: #ffffff;
+	text-align: center;
 	@media screen and (min-width:640px){
-	padding:10px;
+	padding:12px;
+	font: 400 12px/16px "Fira Sans", sans-serif;
 	}
 	@media screen and (min-width:1025px){
 	padding:14px 16px;
+	font: 400 14px/20px "Fira Sans", sans-serif;
 	}
 	&:hover{
 		transform: scale(1.1);
@@ -219,8 +233,13 @@ p{
 	}
   }
   &__contacts{
+	@media screen and (min-width:640px){
+		font: 400 12px/16px "Fira Sans", sans-serif;  
+	}
 	@media screen and (min-width:1025px){
 		margin:12px 0;
+		text-align: center;
+		font: 400 14px/20px "Fira Sans", sans-serif;
 	}
   }
 }

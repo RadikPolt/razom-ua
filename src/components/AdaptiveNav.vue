@@ -1,6 +1,32 @@
 <template>
-  <nav class="ba-nav">
-    <ul class="menu show-for-large">
+  <nav class="ba-nav-mob">
+    <button class="ba-nav-mob__close">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="6.34307"
+          y1="6.34314"
+          x2="17.6568"
+          y2="17.6569"
+          stroke="#29B8FF"
+          stroke-width="1.5"
+        />
+        <line
+          x1="6.34308"
+          y1="17.6569"
+          x2="17.6568"
+          y2="6.34316"
+          stroke="#29B8FF"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+    <ul class="menu vertical text-center medium-text-left">
       <li>
         <router-link class="ba-nav__link" to="/">
           <img src="../../public/img/home-page/syringe.png" alt="Потреби лікарень" />
@@ -29,39 +55,21 @@
         <router-link class="ba-button" to="#">Марафон “Ти не один”</router-link>
       </li>
     </ul>
-    <button class="menu-icon hide-for-large" @click="toggleMenu"></button>
   </nav>
 </template>
 
 <script>
-import { eventBus } from "@/main.js";
-export default {
-  name: "Nav",
-  data() {
-    return {
-      isMenuOpen: true
-    };
-  },
-  methods: {
-    toggleMenu() {
-      console.log("dfsdfs");
-
-      eventBus.$emit("toggleMenu");
-    }
-  }
-};
+export default {};
 </script>
 
 <style  lang="scss">
-.ba-nav {
-	position: relative;
-  .menu-icon {
-    width: 16px;
-    height: 12px;
-    color: $primary-color;
-    &::after {
-      height: 1.5px;
-    }
+.ba-nav-mob {
+  padding: 124px 43px 43px;
+  &__close {
+    position: absolute;
+    top: 43px;
+    right: 16px;
+    cursor: pointer;
   }
   &__link {
     font-size: 18px;
@@ -92,15 +100,19 @@ export default {
     }
   }
   li + li {
-    margin-left: 32px;
+    margin-top: 40px;
   }
   .ba-button {
-    display: inline-block;
     padding: 16px;
+    border: 1px solid $success-color;
+    border-radius: 4px;
+    color: #ffffff;
+    background: $success-color;
+    &:hover,
+    &:active {
+      background-color: #fff;
+      color: $success-color;
+    }
   }
-}
-.menu {
-  display: flex;
-  align-items: center;
 }
 </style>

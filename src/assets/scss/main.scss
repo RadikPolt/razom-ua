@@ -12,7 +12,7 @@
 //   @include foundation-dropdown-menu;
 
 //   // Layout components
-//   @include foundation-off-canvas;
+  @include foundation-off-canvas;
 //   @include foundation-reveal;
 //   @include foundation-sticky;
 //   @include foundation-title-bar;
@@ -23,3 +23,18 @@
 //   @if $flex { @include foundation-flex-classes; }
   @include foundation-visibility-classes;
 //   @if $prototype { @include foundation-prototype-classes; }
+
+.ba-button{
+	display: inline-block;
+	padding: 16px;
+	border: 1px solid $success-color;
+	border-radius: 4px;
+	color: #ffffff;
+	background: $success-color;
+	transition: background-color, color 0.3s ;
+	&:hover,
+	&:active{
+		background-color: #fff;
+		color: $success-color;
+	}
+}

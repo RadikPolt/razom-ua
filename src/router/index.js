@@ -11,7 +11,7 @@ Vue.use(VueRouter)
     component: Home
   },
   {
-    path: '/potreby-likaren',
+    path: '/vikonano',
     name: 'Hospitals',
     component: () => import('../views/Hospitals.vue')
   }

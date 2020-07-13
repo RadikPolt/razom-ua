@@ -1,7 +1,7 @@
 <template>
 <div>
       <router-link to="/">На головну</router-link>
-		<router-link to="/potreby-likaren">Потреби лікарень</router-link>
+		<router-link to="/vikonano">Виконано</router-link>
     <router-view/>
 	<Footer />
 </div>

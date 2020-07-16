@@ -76,6 +76,26 @@
 	 @media screen and (min-width:1025px){
 	 width:46%;
 	 }
+	 &__button{
+		 background-color: transparent;
+		 color:#32323E;
+		 display: inline-block;
+		 font-family: 'Fira Sans';
+		 font-style: normal;
+		 font-weight: 600;
+		 font-size: 16px;
+		 line-height: 24px;
+		 border: 2px solid #32323E;
+		 border-radius: 15px;
+		 outline: none;
+		 padding: 5px 15px;
+		 margin:10px auto;
+		 &:hover, &:active{
+			color:#29B8FF;
+			border: 2px solid #29B8FF;
+			outline: none;
+		 }
+	 }
 	 &__donate{
 	 font-family: 'Fira Sans';
 	 font-style: normal;
@@ -108,6 +128,9 @@
 		 color: #32323E;
 		 margin:0;
 		 padding-bottom: 16px;
+		a{
+			color: #32323E;
+		}
 	 }
 	 &__information{
 		 font-family: Fira Sans;

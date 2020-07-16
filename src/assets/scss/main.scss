@@ -89,7 +89,6 @@
 		 border-radius: 15px;
 		 outline: none;
 		 padding: 5px 15px;
-		 margin:10px auto;
 		 &:hover, &:active{
 			color:#29B8FF;
 			border: 2px solid #29B8FF;
@@ -114,6 +113,7 @@
 	 color: #32323E;
 	 display: inline-block;
 	 margin-top: 20px;
+	 margin-bottom: 10px;
 	 &:hover{
 	 color: #29B8FF;
 	 transition: 0.3s;
@@ -127,7 +127,7 @@
 		 line-height: 20px;
 		 color: #32323E;
 		 margin:0;
-		 padding-bottom: 16px;
+		 padding-top: 15px;
 		a{
 			color: #32323E;
 		}
@@ -139,6 +139,7 @@
  font-size: 12px;
  line-height: 16px;
  color: #9495A2;
+ margin-top: 12px;
  a{
 	 color: #29B8FF;
 	 text-decoration: underline;

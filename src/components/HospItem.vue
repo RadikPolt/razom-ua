@@ -5,7 +5,7 @@
     </div>
     <a class="ba-card__title" href="#" v-bind:key="hosp.post_title">{{ hosp.post_title }}</a>
     <div class="ba-card__content">
-      <button class="ba-card__button" v-on:click="show = !show">Надана допомога</button>
+      <button class="ba-card__button" v-on:click="show = !show" v-if="hosp.post_content.length">Детальніше</button>
       <transition name="fade">
         <div v-if="show">
           <p
@@ -19,7 +19,7 @@
     </div>
 
     <div class="ba-card__information">
-      <span class="ba-card__date" v-bind:key="hosp.post_date">{{ hosp.post_date }}</span>
+      <time class="ba-card__date" v-bind:key="hosp.post_date">{{ hosp.post_date }}</time>
       <span class="ba-card__author">
         Координатор
         <a href="#">Власюк Таня</a>

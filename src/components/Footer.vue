@@ -66,7 +66,6 @@ p{
 	}
 	@media screen and (min-width:1025px){
 		font: 400 14px/20px "Fira Sans", sans-serif;
-		padding: 0 24px;
 	}
   &__wrapper {
 	display: flex;

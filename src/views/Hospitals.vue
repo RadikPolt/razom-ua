@@ -39,8 +39,8 @@ export default {
     return {
       cards: [],
       cardsData: [],
-      page: 10,
-      perPage: 10
+      page: 20,
+      perPage: 20
     };
   },
   methods: {

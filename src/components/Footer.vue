@@ -214,7 +214,8 @@ align-items: center;
  }
  &__text{
 	display: inline-block;
-	padding:16px 42px;
+	text-align: center;
+	padding:16px;
 	font-size: 14px;
 	line-height: 20px;
 	color: #ffffff;

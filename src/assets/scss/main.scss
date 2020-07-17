@@ -3,7 +3,9 @@
 @import "normalize";
 @import "layout";
 @import "elements";
-
+body{
+	// min-height: 100vh;
+}
 .ba-container{
 	padding-left: 16px;
   padding-right: 16px;
@@ -12,7 +14,6 @@
 }
 //Hospitals-page
  .ba-hospitals{
-	min-height: 82vh;
 	 &__title{
 		 text-align: left;
 		 font-family: 'Montserrat';

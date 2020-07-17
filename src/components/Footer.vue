@@ -77,7 +77,7 @@ p{
 		padding:0;
 	}
 	@media screen and (min-width:1025px){
-		padding: 0;
+		padding: 0 24px;
 		justify-content: space-between;
 		margin:0 auto;
 		align-items: baseline;

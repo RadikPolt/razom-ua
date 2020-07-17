@@ -5,7 +5,11 @@
     </div>
     <a class="ba-card__title" href="#" v-bind:key="hosp.post_title">{{ hosp.post_title }}</a>
     <div class="ba-card__content">
-      <button class="ba-card__button" v-on:click="show = !show" v-if="hosp.post_content.length">Детальніше</button>
+      <button
+        class="ba-card__button"
+        v-on:click="show = !show"
+        v-if="hosp.post_content.length"
+      >{{show?'Сгорнути':'Детальніше'}}</button>
       <transition name="fade">
         <div v-if="show">
           <p
@@ -35,7 +39,7 @@ export default {
   props: ["hosp"],
   data: function() {
     return {
-      show: false
+      show: false,
     };
   }
 };
@@ -49,4 +53,5 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
   opacity: 0;
 }
+
 </style>

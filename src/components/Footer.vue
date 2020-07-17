@@ -3,11 +3,11 @@
 		<div class="ba-tablet-footer desktop-hiden">
 			<div class="ba-tablet-footer__wrapper mobile-hiden">
 				<p class="ba-footerRight__copyright">2020 RazomUkraine.com</p>
-				<a href="#" class="ba-footerRight__policy">Політика конфіденційності</a>
+				<a href="https://razomukraine.com/privacy-policy/" class="ba-footerRight__policy">Політика конфіденційності</a>
 			</div>
 			<!-- /.ba-tablet-footer__wrapper -->
 			<div class="ba-mobile-footer">
-				<a href="#">Контактна інформація</a>
+				<a href="https://razomukraine.com/contact-us/">Контактна інформація</a>
 				<div class="ba-languages">
 <a href="#" class="ba-languages__ua">УКР</a>
 <a href="#" class="ba-languages__eng">ENG</a>
@@ -18,8 +18,8 @@
 		<div class="ba-footer__wrapper">
 <div class="ba-footerLeft">
 <p class="ba-footerLeft__copyright tablet-hiden">2020 RazomUkraine.com</p>
-<a href="#" class="ba-footerLeft__policy tablet-hiden">Політика конфіденційності</a>
-<p class="ba-bachoo">Зроблено <a href="#" class="ba-bachoo__link">Bachoo Design Studio</a></p>
+<a href="https://razomukraine.com/privacy-policy/" class="ba-footerLeft__policy tablet-hiden">Політика конфіденційності</a>
+<p class="ba-bachoo">Зроблено <a href="https://bachoodesign.com/" class="ba-bachoo__link">Bachoo Design Studio</a></p>
 </div>
 <div class="ba-footerRight">
 	<div class="ba-languages mobile-hiden tablet-hiden">
@@ -27,10 +27,10 @@
 <a href="#" class="ba-languages__eng">ENG</a>
 	</div>
 	<a href="#" class="ba-footerRight__contacts mobile-hiden tablet-hiden desktop-hiden">Контактна інформація</a>
-	<a class="ba-footer__socials tablet-hiden desktop-hiden" href="https://razomukraine.com/contact-us/" target="_blank" rel="noopener noreferrer"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+	<a class="ba-footer__socials tablet-hiden desktop-hiden" href="https://www.facebook.com/RazomUAplatform" target="_blank" rel="noopener noreferrer"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
 	<a href="tel:+380994691943" class="ba-footerRight__phone"><span class="ba-footerRight__text">Гаряча лінія +380994691943</span></a>
-	<a href="#" class="ba-footerRight__contacts mobile-hiden tablet-hiden">Контактна інформація</a>
-	<a class="ba-footer__socials mobile-hiden" href="https://razomukraine.com/contact-us/" target="_blank" rel="noopener noreferrer"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
+	<a href="https://razomukraine.com/contact-us/" class="ba-footerRight__contacts mobile-hiden tablet-hiden">Контактна інформація</a>
+	<a class="ba-footer__socials mobile-hiden" href="https://www.facebook.com/RazomUAplatform" target="_blank" rel="noopener noreferrer"><svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg></a>
 </div>
 </div>
 <!-- /.ba-footer__wrapper -->

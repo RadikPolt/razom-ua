@@ -1,3 +1,4 @@
+/* eslint-disable vue/valid-v-model */
 <template>
   <article class="ba-card">
     <div class="ba-card__donate">
@@ -23,7 +24,10 @@
     </div>
 
     <div class="ba-card__information">
-      <time class="ba-card__date" v-bind:key="hosp.post_date">{{ hosp.post_date }}</time>
+      <span
+        class="ba-card__date"
+        v-bind:key="hosp.post_date"
+      >{{ new Date(hosp.post_date) | formatDate }}</span>
       <span class="ba-card__author">
         Координатор
         <a href="#">Власюк Таня</a>
@@ -37,11 +41,24 @@
 export default {
   name: "HospItem",
   props: ["hosp"],
-  data: function() {
+  data() {
     return {
-      show: false,
+		show: false,
     };
-  }
+  },
+  filters: {
+  formatDate: d => [
+    [
+      `0${d.getDate()}`.slice(-2),
+      `0${d.getMonth() + 1}`.slice(-2),
+      d.getFullYear(),
+    ].join('.') + ` | `,
+    [
+      `0${d.getHours()}`.slice(-2),
+      `0${d.getMinutes()}`.slice(-2),
+    ].join(':'),
+  ].join(' ') + ` | `,
+},
 };
 </script>
 
@@ -53,5 +70,4 @@ export default {
 .fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
   opacity: 0;
 }
-
 </style>

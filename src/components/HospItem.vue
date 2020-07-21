@@ -10,7 +10,7 @@
         class="ba-card__button"
         v-on:click="show = !show"
         v-if="hosp.post_content.length"
-      >{{show?'Сгорнути':'Детальніше'}}</button>
+      >{{show?'Згорнути':'Детальніше'}}</button>
       <transition name="fade">
         <div v-if="show">
           <p

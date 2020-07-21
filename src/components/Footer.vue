@@ -50,7 +50,6 @@ name: "Footer",
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap");
-
 p{
 	@media screen and (min-width:640px){
 		margin:0;
@@ -118,7 +117,6 @@ p{
 	transition: 1s;
 }
   }
-
 }
 .ba-footerLeft{
   display: flex;
@@ -146,10 +144,9 @@ p{
 	flex-direction: row;
 }
 @media screen and (min-width:1025px){
-	width:44%;
+	width:46%;
 	justify-content: space-between;
 }
-
 }
 .ba-bachoo{
 	color: #9495A2;
@@ -283,7 +280,6 @@ align-items: center;
   @media screen and (min-width: 1025px) {
 	display: none;
   }
-
 }
 //hide elements
 .mobile-hiden{

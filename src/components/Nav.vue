@@ -26,7 +26,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="ba-button" to="#">Марафон “Ти не один”</router-link>
+        <a class="ba-button" href="https://ubb.org.ua/ru/project/6050/" target="_blank">Марафон “Ти не один”</a>
       </li>
     </ul>
     <button class="menu-icon hide-for-xlarge" @click="toggleMenu"></button>

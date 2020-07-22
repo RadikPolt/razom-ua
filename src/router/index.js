@@ -15,7 +15,7 @@ Vue.use(VueRouter)
     path: '/likarni',
     name: 'Лікарні',
     component: Hospitals
-  }
+  },
 ]
 
 const router = new VueRouter({

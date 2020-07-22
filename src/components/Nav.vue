@@ -1,6 +1,6 @@
 <template>
   <nav class="ba-nav">
-    <ul class="menu show-for-large">
+    <ul class="menu show-for-xlarge">
       <li>
         <router-link class="ba-nav__link" to="/">
           <img src="../../public/img/home-page/syringe.png" alt="Потреби лікарень" />
@@ -14,7 +14,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="ba-nav__link" to="#">
+        <router-link class="ba-nav__link" to="/pronas">
           <img src="../../public/img/home-page/hi.png" alt="Про нас" />
           Про нас
         </router-link>
@@ -29,7 +29,7 @@
         <router-link class="ba-button" to="#">Марафон “Ти не один”</router-link>
       </li>
     </ul>
-    <button class="menu-icon hide-for-large" @click="toggleMenu"></button>
+    <button class="menu-icon hide-for-xlarge" @click="toggleMenu"></button>
   </nav>
 </template>
 
@@ -44,8 +44,6 @@ export default {
   },
   methods: {
     toggleMenu() {
-      console.log("dfsdfs");
-
       eventBus.$emit("toggleMenu");
     }
   }
@@ -54,20 +52,29 @@ export default {
 
 <style  lang="scss">
 .ba-nav {
-	position: relative;
+  //   position: relative;
   .menu-icon {
+    position: absolute;
+    z-index: 5;
+    top: 22px;
+    right: 20px;
+    @include breakpoint(medium) {
+      right: 40px;
+      top: 28px;
+    }
     width: 16px;
-    height: 12px;
-    color: $primary-color;
-    &::after {
-      height: 1.5px;
+    height: 14px;
+    &::after,
+    &:hover::after {
+      height: 2px;
+      background: $primary-color;
+      box-shadow: 0 6px 0 $primary-color, 0 12px 0$primary-color;
     }
   }
   &__link {
     font-size: 18px;
     color: $black;
     position: relative;
-    transition: transform 0.5s ease-in;
     &:after {
       content: "";
       position: absolute;
@@ -76,7 +83,7 @@ export default {
       bottom: -3px;
       height: 1px;
       background-color: $black;
-      transition: scale 0.5s;
+      transition: transform 0.3s;
       transform: scaleX(0);
     }
     &:hover,
@@ -95,12 +102,20 @@ export default {
     margin-left: 32px;
   }
   .ba-button {
-    display: inline-block;
     padding: 16px;
+    border-color: $success-color;
+    background: $success-color;
+    &:hover,
+    &:active {
+      background-color: #fff;
+      color: $success-color;
+    }
   }
 }
 .menu {
-  display: flex;
-  align-items: center;
+  @include breakpoint(1260px) {
+    display: flex;
+    align-items: center;
+  }
 }
 </style>

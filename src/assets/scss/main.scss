@@ -1,40 +1,66 @@
-
 @include foundation-global-styles;
 @include foundation-forms;
 @include foundation-typography;
 @include foundation-flex-grid;
 
-  // Menu-based containers
-  @include foundation-menu;
-  @include foundation-menu-icon;
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
 //   @include foundation-accordion-menu;
 //   @include foundation-drilldown-menu;
 //   @include foundation-dropdown-menu;
 
 //   // Layout components
-  @include foundation-off-canvas;
+@include foundation-off-canvas;
 //   @include foundation-reveal;
 //   @include foundation-sticky;
 //   @include foundation-title-bar;
 //   @include foundation-top-bar;
 
-  // Helpers
-  @include foundation-float-classes;
+// Helpers
+@include foundation-float-classes;
 //   @if $flex { @include foundation-flex-classes; }
-  @include foundation-visibility-classes;
+@include foundation-visibility-classes;
 //   @if $prototype { @include foundation-prototype-classes; }
 
-.ba-button{
-	display: inline-block;
-	padding: 16px;
-	border: 1px solid $success-color;
-	border-radius: 4px;
-	color: #ffffff;
-	background: $success-color;
-	transition: background-color, color 0.3s ;
-	&:hover,
-	&:active{
-		background-color: #fff;
-		color: $success-color;
-	}
+$yellow-marker: #FDB806;
+$red-marker: red;
+$green-marker: green;
+$black-marker: black;
+a,
+button {
+  transition: 0.2s ease-in;
+  transition-property: color, background-color, border-color;
 }
+.ba-button {
+  display: inline-block;
+  padding: 16px;
+  border: 1px solid $success-color;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: $green-marker;
+  transition: background-color 0.3s;
+  &:hover,
+  &:active {
+    background-color: #fff;
+    color: $success-color;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  color: inherit;
+  text-rendering: optimizeLegibility;
+}
+.ba-container {
+	@include breakpoint(medium down) {
+	  padding-left: 33px;
+	  padding-right: 33px;
+	}
+ }

@@ -27,9 +27,11 @@ export default {
 
 <style lang="scss">
 .ba-logo {
+  z-index: 5;
+  position: relative;
   p {
     font-size: 12px;
-    color: $black;
+    color: $medium-gray;
   }
   img {
     width: 205px;
@@ -44,15 +46,37 @@ export default {
     }
   }
 }
+.ba-logo--tablet {
+  p {
+    line-height: 0.6;
+  }
+}
 .ba-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //   position: absolute;
+  position: fixed;
+  z-index: 5;
+  background: $white;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 5;
-  padding: 32px 24px;
+  padding: 16px 16px 0;
+  @include breakpoint(large) {
+    padding: 20px 40px 14px;
+  }
+
+  @include breakpoint(medium) {
+    padding: 15px 40px 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), #fff);
+    height: 30px;
+  }
 }
 </style>

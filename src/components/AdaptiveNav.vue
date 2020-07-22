@@ -1,6 +1,17 @@
 <template>
   <nav class="ba-nav-mob">
-    <button class="ba-nav-mob__close">
+    <router-link class="ba-logo show-for-large hide-for-small" to="/">
+      <img src="@/assets/logo.png" alt="РазомUA" />
+      <p>За підтримки Фонду Соціальної Справедливості</p>
+    </router-link>
+    <router-link class="ba-logo ba-logo--tablet show-for-medium hide-for-large" to="/">
+      <img src="@/assets/logo-tablet.png" alt="РазомUA" />
+      <p>За підтримки Фонду Соціальної Справедливості</p>
+    </router-link>
+    <router-link class="ba-logo ba-logo--mobile show-for-small hide-for-medium" to="/">
+      <img src="@/assets/logo-mobile.png" alt="РазомUA" />
+    </router-link>
+    <button class="ba-nav-mob__close" @click="toggleMenu">
       <svg
         width="24"
         height="24"
@@ -40,7 +51,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="ba-nav__link" to="#">
+        <router-link class="ba-nav__link" to="/pronas">
           <img src="../../public/img/home-page/hi.png" alt="Про нас" />
           Про нас
         </router-link>
@@ -59,23 +70,53 @@
 </template>
 
 <script>
-export default {};
+import { eventBus } from "@/main.js";
+export default {
+  data() {
+    return {
+      isMenuOpen: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      eventBus.$emit("toggleMenu");
+    }
+  }
+};
 </script>
 
 <style  lang="scss">
 .ba-nav-mob {
-  padding: 124px 43px 43px;
+  .ba-logo {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    @include breakpoint(medium) {
+      top: 14px;
+      left: 40px;
+    }
+  }
+  padding: 124px 0px 43px;
+  @include breakpoint(medium) {
+    padding: 72px 40px 43px;
+  }
+  @include breakpoint(large) {
+    padding: 84px 40px 43px;
+  }
   &__close {
     position: absolute;
-    top: 43px;
+    top: 18px;
     right: 16px;
+    @include breakpoint(medium) {
+      right: 37px;
+      top: 22px;
+    }
     cursor: pointer;
   }
   &__link {
     font-size: 18px;
     color: $black;
     position: relative;
-    transition: transform 0.5s ease-in;
     &:after {
       content: "";
       position: absolute;
@@ -84,7 +125,7 @@ export default {};
       bottom: -3px;
       height: 1px;
       background-color: $black;
-      transition: scale 0.5s;
+      transition: transform 0.3s ease-in;
       transform: scaleX(0);
     }
     &:hover,
@@ -104,15 +145,22 @@ export default {};
   }
   .ba-button {
     padding: 16px;
-    border: 1px solid $success-color;
-    border-radius: 4px;
-    color: #ffffff;
+    border-color: $success-color;
     background: $success-color;
     &:hover,
     &:active {
       background-color: #fff;
       color: $success-color;
     }
+  }
+}
+.menu li a {
+  display: inline-block;
+}
+.menu.vertical {
+  @include breakpoint(medium) {
+    padding-top: 24px;
+    border-top: 1px solid $primary-color;
   }
 }
 </style>

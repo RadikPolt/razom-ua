@@ -1,28 +1,33 @@
 <template>
-  <div class="ba-section-intro ba-intro small-16 medium-13 large-10">
-    <div class="ba-intro__body">
-      <a href="https://iosj.org.ua/" target="_blank" rel="noopener" class="ba-intro__platform">
-        <img src="@/assets/fond.png" alt="Громадська платформа РазомUA проти covid-19" />
-        <p>Платформа організована спільно з Радою Волонтерів Міністерства Оборони України, волонтерами з усіх регіонів України за підтримки Офісу Президента України та Міністерства Охорони Здоров`я України.</p>
+  <div class="ba-intro-intro ba-intro column small-16 medium-13 large-10">
+    <div class="ba-intro__body " v-if="intro">
+      <a :href="intro.image_link" target="_blank" rel="noopener" class="ba-intro__platform">
+        <img :src="intro.image.url" :alt="intro.title" />
+        <p>{{intro.content}}</p>
       </a>
-      <h1 class="ba-intro__title">Громадська платформа РазомUA проти covid-19</h1>
+      <h1 class="ba-intro__title">{{intro.title}}</h1>
       <ul class="ba-intro__list">
-        <li>Інформуємо про наявні потреби лікарень України</li>
-        <li>Допомагаємо збирати кошти на потреби лікарень</li>
-        <li>Звітуємо про закриття потреб державою, волонтерами або гуманітарною допомогою</li>
+        <li v-for="(item, index) in intro.list" :key="index">{{intro.list[index].item}}</li>
       </ul>
       <a
-        href="https://ubb.org.ua/ru/project/6050/"
-        class="ba-button"
+        :href="intro.button_link.url"
+        class="ba-button text-center"
         target="_blank"
         rel="noopener"
-      >Допомогти</a>
+      >{{intro.button_link.title}}</a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    intro: {
+      type: Object,
+      required: true
+    }
+  }
+};
 </script>
 
 <style lang="scss">
@@ -30,15 +35,18 @@ export default {};
   &__platform {
     display: flex;
     align-items: center;
+    margin-bottom: 40px;
+    @include breakpoint(medium) {
+      margin-bottom: 32px;
+    }
     img {
       width: 76px;
     }
     p {
-      color: $dark-gray;
+      color: $medium-gray;
       font-size: 10px;
       margin: 0;
       margin-left: 8px;
-      max-width: 215px;
       @include breakpoint(medium) {
         max-width: 440px;
         font-size: 12px;
@@ -52,6 +60,7 @@ export default {};
   &__title {
     font-weight: 800;
     color: $primary-color;
+    margin-bottom: 24px;
   }
   &__list {
     list-style: none;
@@ -72,6 +81,12 @@ export default {};
     li + li {
       margin-top: 16px;
     }
+  }
+  .ba-button {
+    @include breakpoint(small down) {
+      width: 100%;
+    }
+    display: inline-block;
   }
 }
 .ba-button {

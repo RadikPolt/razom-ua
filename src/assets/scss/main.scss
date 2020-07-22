@@ -54,7 +54,8 @@ body {
     font-weight: 800;
     font-size: 26px;
     line-height: 32px;
-    color: #29b8ff;
+	 color: #29b8ff;
+	 padding-top: 50px;
     margin-top: 64px;
     margin-bottom: 24px;
     @media screen and (min-width: 640px) {
@@ -205,7 +206,7 @@ button {
   border: 1px solid $success-color;
   border-radius: 4px;
   color: #ffffff;
-  background-color: $green-marker;
+  background-color: $success-color;
   transition: background-color 0.3s;
   &:hover,
   &:active {

@@ -45,7 +45,7 @@
         </router-link>
       </li>
       <li>
-        <router-link class="ba-nav__link" to="/vukonano">
+        <router-link class="ba-nav__link" to="/vikonano">
           <img src="../../public/img/home-page/ok.png" alt="Виконано" />
           Виконано
         </router-link>

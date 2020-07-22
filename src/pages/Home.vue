@@ -35,14 +35,12 @@ export default {
         this.sections = data[0].acf;
         console.log(this.sections);
       });
-  },
-  created() {
-    fetch(`https://razomua.flywheelstaging.com/wp-json/hospitals/v1/post`)
-      .then((result) => result.json())
-      .then((data) => {
-        console.log(data);
-        this.cards = data;
-      });
+    //  fetch(`https://razomua.flywheelstaging.com/wp-json/hospitals/v1/post`)
+    //    .then((result) => result.json())
+    //    .then((data) => {
+    //      console.log(data);
+    //      this.cards = data;
+    //    });
   },
 };
 </script>

@@ -1,6 +1,43 @@
 <template>
-  <nav class="ba-nav">
-    <ul class="menu show-for-xlarge">
+  <nav class="ba-nav-mob">
+    <router-link class="ba-logo show-for-large hide-for-small" to="/">
+      <img src="@/assets/logo.png" alt="РазомUA" />
+      <p>За підтримки Фонду Соціальної Справедливості</p>
+    </router-link>
+    <router-link class="ba-logo ba-logo--tablet show-for-medium hide-for-large" to="/">
+      <img src="@/assets/logo-tablet.png" alt="РазомUA" />
+      <p>За підтримки Фонду Соціальної Справедливості</p>
+    </router-link>
+    <router-link class="ba-logo ba-logo--mobile show-for-small hide-for-medium" to="/">
+      <img src="@/assets/logo-mobile.png" alt="РазомUA" />
+    </router-link>
+    <button class="ba-nav-mob__close" @click="toggleMenu">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          x1="6.34307"
+          y1="6.34314"
+          x2="17.6568"
+          y2="17.6569"
+          stroke="#29B8FF"
+          stroke-width="1.5"
+        />
+        <line
+          x1="6.34308"
+          y1="17.6569"
+          x2="17.6568"
+          y2="6.34316"
+          stroke="#29B8FF"
+          stroke-width="1.5"
+        />
+      </svg>
+    </button>
+    <ul class="menu vertical text-center medium-text-left">
       <li>
         <router-link class="ba-nav__link" to="/">
           <img src="../../public/img/home-page/syringe.png" alt="Потреби лікарень" />
@@ -29,17 +66,15 @@
         <router-link class="ba-button" to="#">Марафон “Ти не один”</router-link>
       </li>
     </ul>
-    <button class="menu-icon hide-for-xlarge" @click="toggleMenu"></button>
   </nav>
 </template>
 
 <script>
 import { eventBus } from "@/main.js";
 export default {
-  name: "Nav",
   data() {
     return {
-      isMenuOpen: true
+      isMenuOpen: false
     };
   },
   methods: {
@@ -51,25 +86,32 @@ export default {
 </script>
 
 <style  lang="scss">
-.ba-nav {
-  //   position: relative;
-  .menu-icon {
+.ba-nav-mob {
+  .ba-logo {
     position: absolute;
-    z-index: 5;
-    top: 22px;
-    right: 20px;
+    top: 16px;
+    left: 16px;
     @include breakpoint(medium) {
-      right: 40px;
-      top: 28px;
+      top: 14px;
+      left: 40px;
     }
-    width: 16px;
-    height: 14px;
-    &::after,
-    &:hover::after {
-      height: 2px;
-      background: $primary-color;
-      box-shadow: 0 6px 0 $primary-color, 0 12px 0$primary-color;
+  }
+  padding: 124px 0px 43px;
+  @include breakpoint(medium) {
+    padding: 72px 40px 43px;
+  }
+  @include breakpoint(large) {
+    padding: 84px 40px 43px;
+  }
+  &__close {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    @include breakpoint(medium) {
+      right: 37px;
+      top: 22px;
     }
+    cursor: pointer;
   }
   &__link {
     font-size: 18px;
@@ -83,7 +125,7 @@ export default {
       bottom: -3px;
       height: 1px;
       background-color: $black;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease-in;
       transform: scaleX(0);
     }
     &:hover,
@@ -99,7 +141,7 @@ export default {
     }
   }
   li + li {
-    margin-left: 32px;
+    margin-top: 40px;
   }
   .ba-button {
     padding: 16px;
@@ -112,10 +154,13 @@ export default {
     }
   }
 }
-.menu {
-  @include breakpoint(1260px) {
-    display: flex;
-    align-items: center;
+.menu li a {
+  display: inline-block;
+}
+.menu.vertical {
+  @include breakpoint(medium) {
+    padding-top: 24px;
+    border-top: 1px solid $primary-color;
   }
 }
 </style>

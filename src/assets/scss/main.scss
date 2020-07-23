@@ -30,7 +30,7 @@ body{
 		 font-size: 26px;
 		 line-height: 32px;
 		 color: #29B8FF;
-		 margin-top: 64px;
+		 margin-top: 124px;
 		 margin-bottom: 24px;
 		 @media screen and (min-width:640px){
 			 font-family: 'Montserrat';
@@ -38,10 +38,11 @@ body{
 			 font-weight: 800;
 			 font-size: 40px;
 			 line-height: 56px;
+			 margin-top: 132px;
 		 }
 		 @media screen and (min-width:1025px){
 		 font: 800 48px/64px 'Montserrat', sans-serif;
-		 margin-top: 64px;
+		 margin-top: 176px;
 		 margin-bottom: 16px;
 		 max-width: 848px;
 		 }
@@ -149,7 +150,7 @@ body{
  font-size: 12px;
  line-height: 16px;
  color: #9495A2;
- margin-top: 10px;
+ margin-top: 16px;
  a{
 	 color: #29B8FF;
 	 text-decoration: underline;

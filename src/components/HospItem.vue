@@ -4,7 +4,7 @@
     <div class="ba-card__donate">
       <span class="blue">волонтерська допомога</span>
     </div>
-    <a class="ba-card__title" href="#" v-bind:key="hosp.post_title">{{ hosp.post_title }}</a>
+    <h3 class="ba-card__title" href="#" v-bind:key="hosp.post_title">{{ hosp.post_title }}</h3>
     <div class="ba-card__content">
       <button
         class="ba-card__button"

@@ -125,10 +125,7 @@ body{
 	 color: #32323E;
 	 display: inline-block;
 	 margin-top: 20px;
-	 &:hover{
-	 color: #29B8FF;
-	 transition: 0.3s;
-	 }
+	 margin-bottom: 0;
 	 }
 	 &__needs{
 		 font-family: 'Fira Sans';

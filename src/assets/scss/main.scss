@@ -167,4 +167,11 @@ body{
 			 margin-bottom: 0;
 		 }
 	 }
+	 &__author{
+		 a{
+			 &:hover{
+				color: #32323E;;
+			 }
+		 }
+	 }
 	 }

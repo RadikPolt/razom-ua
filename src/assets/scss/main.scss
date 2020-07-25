@@ -56,7 +56,7 @@ body {
     line-height: 32px;
 	 color: #29b8ff;
 	 padding-top: 50px;
-    margin-top: 64px;
+    margin-top: 124px;
     margin-bottom: 24px;
     @media screen and (min-width: 640px) {
       font-family: "Montserrat";
@@ -64,10 +64,11 @@ body {
       font-weight: 800;
       font-size: 40px;
       line-height: 56px;
+	    margin-top: 132px;
     }
     @media screen and (min-width: 1025px) {
       font: 800 48px/64px "Montserrat", sans-serif;
-      margin-top: 64px;
+      margin-top: 176px;
       margin-bottom: 16px;
       max-width: 848px;
     }

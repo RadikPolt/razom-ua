@@ -3,7 +3,7 @@
     <MapLoader
       class="ba-map"
       :mapConfig="mapConfig"
-      apiKey="AIzaSyAm9CHZaUpHbSF3q18i-hQzQxfmaYkttNc"
+      apiKey=""
     >
       // insert your google maps api key to render styled map
       <template slot-scope="{ google, map }">
